@@ -154,3 +154,19 @@ const CONFIG = {
 ## License
 
 Apache-2.0
+
+sample screenshots
+![WhatsApp Image 2025-07-02 at 10 15 07_3370665b](https://github.com/user-attachments/assets/bb9d4f66-0dc5-4e2b-97ec-89c63a442b32)
+![WhatsApp Image 2025-07-02 at 10 15 33_114185ef](https://github.com/user-attachments/assets/40399023-de85-4f6d-816b-dc8df4d4016a)
+![WhatsApp Image 2025-07-02 at 10 15 54_89bdb2e2](https://github.com/user-attachments/assets/eff1ad78-0a25-466e-8053-e85556a538da)
+![WhatsApp Image 2025-07-02 at 10 16 46_7d62c3d2](https://github.com/user-attachments/assets/628abeaf-8781-4a45-adbf-3223c28e2668)
+![WhatsApp Image 2025-07-02 at 10 17 13_c7de3bd8](https://github.com/user-attachments/assets/330e0d6f-d9f2-4d34-9951-28c2d96c0766)
+![WhatsApp Image 2025-07-02 at 10 15 07_bfddf368](https://github.com/user-attachments/assets/eefbf393-1c94-4e52-aee1-70e5a5911fb2)
+![WhatsApp Image 2025-07-02 at 10 15 33_5316f50a](https://github.com/user-attachments/assets/edb00107-ec3d-4454-a132-39857cb3d37d)
+
+
+
+
+
+
+
