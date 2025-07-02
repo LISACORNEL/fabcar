@@ -155,7 +155,7 @@ const CONFIG = {
 
 Apache-2.0
 
-sample screenshots
+SAMPLE SCREENSHOT OF THE SYSTEM
 ![WhatsApp Image 2025-07-02 at 10 15 07_3370665b](https://github.com/user-attachments/assets/bb9d4f66-0dc5-4e2b-97ec-89c63a442b32)
 ![WhatsApp Image 2025-07-02 at 10 15 33_114185ef](https://github.com/user-attachments/assets/40399023-de85-4f6d-816b-dc8df4d4016a)
 ![WhatsApp Image 2025-07-02 at 10 15 54_89bdb2e2](https://github.com/user-attachments/assets/eff1ad78-0a25-466e-8053-e85556a538da)
