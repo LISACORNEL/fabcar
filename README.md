@@ -164,6 +164,12 @@ sample screenshots
 ![WhatsApp Image 2025-07-02 at 10 15 07_bfddf368](https://github.com/user-attachments/assets/eefbf393-1c94-4e52-aee1-70e5a5911fb2)
 ![WhatsApp Image 2025-07-02 at 10 15 33_5316f50a](https://github.com/user-attachments/assets/edb00107-ec3d-4454-a132-39857cb3d37d)
 
+![WhatsApp Image 2025-07-02 at 10 17 37_cdf9b77f](https://github.com/user-attachments/assets/f43bba36-4665-4b8a-ab42-99a640c69590)
+![WhatsApp Image 2025-07-02 at 10 17 59_e7f11b66](https://github.com/user-attachments/assets/71673735-6b02-4129-9b37-6a11700015a5)
+![WhatsApp Image 2025-07-02 at 10 18 39_adc1f475](https://github.com/user-attachments/assets/2189c9c3-4c0e-47ff-8ce5-c8b2e35800f0)
+
+
+
 
 
 
