@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FabCar - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="css/dashboard-styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">FabCar</div>
+        <nav>
+            <ul>
+                
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+              
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+        </nav>
+        <a href="index.html" class="user-btn">
+            <i data-lucide="user"></i>
+            <span>Sign Out</span>
+        </a>
+    </header>
+
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <i data-lucide="shield-check"></i>
+                    <div>
+                        <h3>Blockchain Explorer</h3>
+                        <p>Secure & Transparent</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="#" id="view-all-cars">
+                        <div class="menu-icon">
+                            <i data-lucide="database"></i>
+                        </div>
+                        <div class="menu-content">
+                            <span>All Cars</span>
+                            <small>View complete registry</small>
+                        </div>
+                        <div class="menu-arrow">
+                            <i data-lucide="chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="search-car">
+                        <div class="menu-icon">
+                            <i data-lucide="search"></i>
+                        </div>
+                        <div class="menu-content">
+                            <span>Search Car</span>
+                            <small>Find specific vehicle</small>
+                        </div>
+                        <div class="menu-arrow">
+                            <i data-lucide="chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="add-car">
+                        <div class="menu-icon">
+                            <i data-lucide="plus-circle"></i>
+                        </div>
+                        <div class="menu-content">
+                            <span>Add New Car</span>
+                            <small>Register new vehicle</small>
+                        </div>
+                        <div class="menu-arrow">
+                            <i data-lucide="chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="transfer-car">
+                        <div class="menu-icon">
+                            <i data-lucide="refresh-cw"></i>
+                        </div>
+                        <div class="menu-content">
+                            <span>Transfer Ownership</span>
+                            <small>Change vehicle owner</small>
+                        </div>
+                        <div class="menu-arrow">
+                            <i data-lucide="chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="blockchain-status">
+                    <div class="status-indicator online"></div>
+                    <div class="status-info">
+                        <span>Blockchain Connected</span>
+                        <small>Network: Hyperledger Fabric</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main class="content">
+            <div class="content-header">
+                <div class="header-content">
+                    <h1>Vehicle Registry Dashboard</h1>
+                    <p>Manage your blockchain-powered car registry with complete transparency</p>
+                </div>
+                <div class="actions">
+                    <div class="search-box">
+                        <i data-lucide="search"></i>
+                        <input type="text" placeholder="Search vehicles, owners, or IDs...">
+                        <button><i data-lucide="filter"></i></button>
+                    </div>
+                    <button class="refresh-btn">
+                        <i data-lucide="refresh-cw"></i>
+                        <span>Refresh</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="content-body">
+                <div class="stats-section">
+                    <div class="stats-header">
+                        <h2>Registry Overview</h2>
+                        <div class="stats-period">
+                            <select>
+                                <option>All Time</option>
+                                <option>Last 30 Days</option>
+                                <option>Last 7 Days</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="stats-cards">
+                        <div class="stat-card primary">
+                            <div class="stat-background">
+                                <div class="stat-pattern"></div>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-icon">
+                                    <i data-lucide="car"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Total Vehicles</h3>
+                                    <p id="total-cars" class="stat-number">Loading...</p>
+                                    <span class="stat-change positive">
+                                        <i data-lucide="trending-up"></i>
+                                        +12% from last month
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card secondary">
+                            <div class="stat-background">
+                                <div class="stat-pattern"></div>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-icon">
+                                    <i data-lucide="users"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Unique Owners</h3>
+                                    <p id="unique-owners" class="stat-number">Loading...</p>
+                                    <span class="stat-change positive">
+                                        <i data-lucide="trending-up"></i>
+                                        +8% from last month
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card tertiary">
+                            <div class="stat-background">
+                                <div class="stat-pattern"></div>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-icon">
+                                    <i data-lucide="activity"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Transactions</h3>
+                                    <p id="transactions" class="stat-number">Loading...</p>
+                                    <span class="stat-change positive">
+                                        <i data-lucide="trending-up"></i>
+                                        +24% from last month
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card quaternary">
+                            <div class="stat-background">
+                                <div class="stat-pattern"></div>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-icon">
+                                    <i data-lucide="shield-check"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Verified Records</h3>
+                                    <p class="stat-number">100%</p>
+                                    <span class="stat-change neutral">
+                                        <i data-lucide="shield"></i>
+                                        Blockchain secured
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vehicles-section">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <h2>Vehicle Registry</h2>
+                            <p>Complete list of registered vehicles on the blockchain</p>
+                        </div>
+                        <div class="section-actions">
+                            <div class="view-options">
+                                <button class="view-btn active" data-view="grid" title="Grid View">
+                                    <i data-lucide="grid-3x3"></i>
+                                </button>
+                                <button class="view-btn" data-view="list" title="List View">
+                                    <i data-lucide="list"></i>
+                                </button>
+                                <button class="view-btn" data-view="table" title="Table View">
+                                    <i data-lucide="table"></i>
+                                </button>
+                            </div>
+                            <div class="sort-options">
+                                <select id="sort-select">
+                                    <option value="id">Sort by ID</option>
+                                    <option value="make">Sort by Make</option>
+                                    <option value="owner">Sort by Owner</option>
+                                    <option value="color">Sort by Color</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="vehicles-container">
+                        <div class="vehicles-grid" id="cars-container">
+                            <div class="loading-container">
+                                <div class="loading-animation">
+                                    <div class="loading-spinner"></div>
+                                    <div class="loading-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <h3>Loading Vehicles</h3>
+                                <p>Fetching data from blockchain network...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Enhanced Car Details Modal -->
+    <div class="modal" id="car-details-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content large">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i data-lucide="car"></i>
+                    <h2>Vehicle Details</h2>
+                </div>
+                <button class="close-btn"><i data-lucide="x"></i></button>
+            </div>
+            <div class="modal-body" id="car-details-content">
+                <!-- Car details will be inserted here -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-modal">
+                    <i data-lucide="x"></i>
+                    Close
+                </button>
+                <button class="btn btn-primary" id="transfer-ownership-btn">
+                    <i data-lucide="refresh-cw"></i>
+                    Transfer Ownership
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Search Car Modal -->
+    <div class="modal" id="search-car-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i data-lucide="search"></i>
+                    <h2>Search Vehicle</h2>
+                </div>
+                <button class="close-btn"><i data-lucide="x"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="search-car-form">
+                    <div class="form-group">
+                        <label for="car-id">
+                            <i data-lucide="hash"></i>
+                            Vehicle ID
+                        </label>
+                        <input type="text" id="car-id" placeholder="Enter vehicle ID (e.g., CAR0)" required>
+                        <small>Enter the unique blockchain identifier for the vehicle</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">
+                        <i data-lucide="search"></i>
+                        Search Vehicle
+                    </button>
+                </form>
+                <div id="search-results" class="search-results"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Add Car Modal -->
+    <div class="modal" id="add-car-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content large">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i data-lucide="plus-circle"></i>
+                    <h2>Register New Vehicle</h2>
+                </div>
+                <button class="close-btn"><i data-lucide="x"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="add-car-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="new-car-id">
+                                <i data-lucide="hash"></i>
+                                Vehicle ID
+                            </label>
+                            <input type="text" id="new-car-id" placeholder="e.g., CAR10" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="new-car-make">
+                                <i data-lucide="building"></i>
+                                Make
+                            </label>
+                            <input type="text" id="new-car-make" placeholder="e.g., Toyota" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="new-car-model">
+                                <i data-lucide="car"></i>
+                                Model
+                            </label>
+                            <input type="text" id="new-car-model" placeholder="e.g., Camry" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="new-car-color">
+                                <i data-lucide="palette"></i>
+                                Color
+                            </label>
+                            <select id="new-car-color" required>
+                                <option value="">Select Color</option>
+                                <option value="red">Red</option>
+                                <option value="blue">Blue</option>
+                                <option value="green">Green</option>
+                                <option value="yellow">Yellow</option>
+                                <option value="black">Black</option>
+                                <option value="white">White</option>
+                                <option value="silver">Silver</option>
+                                <option value="gray">Gray</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-car-owner">
+                            <i data-lucide="user"></i>
+                            Owner Name
+                        </label>
+                        <input type="text" id="new-car-owner" placeholder="Enter owner's full name" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">
+                        <i data-lucide="plus-circle"></i>
+                        Register Vehicle
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Transfer Ownership Modal -->
+    <div class="modal" id="transfer-ownership-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i data-lucide="refresh-cw"></i>
+                    <h2>Transfer Ownership</h2>
+                </div>
+                <button class="close-btn"><i data-lucide="x"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="transfer-warning">
+                    <i data-lucide="alert-triangle"></i>
+                    <p>This action will permanently transfer ownership on the blockchain and cannot be undone.</p>
+                </div>
+                <form id="transfer-ownership-form">
+                    <div class="form-group">
+                        <label for="transfer-car-id">
+                            <i data-lucide="hash"></i>
+                            Vehicle ID
+                        </label>
+                        <input type="text" id="transfer-car-id" placeholder="Enter vehicle ID" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="transfer-new-owner">
+                            <i data-lucide="user"></i>
+                            New Owner
+                        </label>
+                        <input type="text" id="transfer-new-owner" placeholder="Enter new owner's full name" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">
+                        <i data-lucide="refresh-cw"></i>
+                        Transfer Ownership
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
